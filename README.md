@@ -22,6 +22,17 @@ Please follow along as the instructor adds authentication to the API.
 - logout.
 - restrict access to endpoints. 
 
+## Seed the Database
+
+- use `npx knex seed:make name` to create a new seed file.
+- use `npx knex seed:run` to run all seeds.
+
+## Layers
+
+- [ routing ] <> [ services/business logic ] <> [ model/data access ]
+
+
 ## Additional Notes
 - Hash passwords before saving them to the database
 - Verify passwords using bcrypt
+
