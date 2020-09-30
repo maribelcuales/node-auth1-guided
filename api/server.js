@@ -1,8 +1,7 @@
 const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
-
-// const bcrypt = require('bcryptjs');  // add bcrypt  
+const session = require("express-session");
 
 const usersRouter = require("../users/users-router.js");
 
