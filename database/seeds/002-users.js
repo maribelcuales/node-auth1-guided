@@ -1,13 +1,31 @@
-
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  // 000-cleanup.js already cleaned out all tables 
+
+  const users = [
+    {
+      username: "groot",
+      password: "Iamgroot!",
+      role: 1,
+    },
+    {
+      username: "admin",
+      password: "keepitsecret,keepitsafe.",
+      role: 1,
+    },
+    {
+      username: "me",
+      password: "changethepass",
+      role: 2,
+    },
+    {
+      username: "nobody",
+      password: "hasnorole",
+    },
+    {
+      username: "notme",
+      password: "hasnorole",
+    },
+  ];
+
+  return knex("users").insert(users); 
 };
