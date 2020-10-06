@@ -1,7 +1,11 @@
 require("dotenv").config();
 
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth";
+//const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth";
+// if using a local postgres server, please create the database manually, Knex will not create it autmatically 
+
+const pgConnection = process.env.DATABASE_URL || "auth?host=localhost&port=5433";
 // if using a local postgres server, please create the database manually, Knex will not create it autmatically
+
 
 module.exports = {
   development: {
