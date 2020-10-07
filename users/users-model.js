@@ -8,11 +8,14 @@ module.exports = {
 };
 
 function find() {
-  return db("users").select("id", "username").orderBy("id");
+  // return db("users").select("id", "username").orderBy("id");
+  return db("users").select("id", "username");
+
 }
 
 function findBy(filter) {
-  return db("users").where(filter).orderBy("id");
+  // return db("users").where(filter).orderBy("id");
+  return db("users").where(filter);
 }
 
 async function add(user) {
