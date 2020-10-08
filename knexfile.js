@@ -29,7 +29,7 @@ module.exports = {
     connection: {
       database: 'auth',
       user: 'postgres',
-      password: '77Million%',
+      password: 'secretpassword',
       port: 5433
     },
     pool: {
