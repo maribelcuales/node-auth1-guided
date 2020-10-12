@@ -7,13 +7,13 @@ const parse = require('pg-connection-string').parse;
 
 // const configConnection = parse('postgres://postgres:secretpassword@localhost:5433/auth');
 
-const PG_USER = process.env.POSTGRES_USER; 
-const PG_PASSWORD = process.env.POSTGRES_PASSWORD; 
+// const PG_USER = process.env.POSTGRES_USER; 
+// const PG_PASSWORD = process.env.POSTGRES_PASSWORD; 
 
-const configConnection = parse('postgres://postgres:PG_PASSWORD@localhost:5433/auth');
+// const configConnection = parse('postgres://postgres:PG_PASSWORD@localhost:5433/auth');
 
-//const PG_URL = process.env.POSTGRES_URI;
-// const configConnection = parse(PG_URL);
+const PG_URL = process.env.POSTGRES_URI;
+const configConnection = parse(PG_URL);
 
 const pgConnection = process.env.DATABASE_URL ||  configConnection;
 
