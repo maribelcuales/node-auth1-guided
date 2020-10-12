@@ -5,13 +5,6 @@ require("dotenv").config();
 
 const parse = require('pg-connection-string').parse;
 
-// const configConnection = parse('postgres://postgres:secretpassword@localhost:5433/auth');
-
-// const PG_USER = process.env.POSTGRES_USER; 
-// const PG_PASSWORD = process.env.POSTGRES_PASSWORD; 
-
-// const configConnection = parse('postgres://postgres:PG_PASSWORD@localhost:5433/auth');
-
 const PG_URL = process.env.POSTGRES_URI;
 const configConnection = parse(PG_URL);
 
@@ -40,12 +33,6 @@ module.exports = {
   production: {
     client: "pg",
     connection: pgConnection,
-    // connection: {
-    //   database: 'auth',
-    //   user: 'postgres',
-    //   password: 'secretpassword',
-    //   port: 5433
-    // },
     pool: {
       min: 2,
       max: 10,
