@@ -8,7 +8,10 @@ const parse = require('pg-connection-string').parse;
 const PG_URL = process.env.POSTGRES_URI;
 const configConnection = parse(PG_URL);
 
-const pgConnection = process.env.DATABASE_URL ||  configConnection;
+// const pgConnection = process.env.DATABASE_URL ||  configConnection;
+
+const PG_USER = process.env.POSTGRES_USER;
+const PG_PASSWORD = process.env.POSTGRES_PASSWORD;
 
 module.exports = {
   development: {
@@ -32,7 +35,14 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection: pgConnection,
+    // connection: pgConnection,
+    connection: {
+      database: process.env.POSTGRES_DATABASE, 
+      host: process.env.POSTGRES_HOST,
+      user: process.env.POSTGRES_USER,
+      password: process.env.POSTGRES_PASSWORD,
+      port: process.env.POSTGRES_PORT
+    }, 
     pool: {
       min: 2,
       max: 10,
