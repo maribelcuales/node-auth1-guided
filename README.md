@@ -41,4 +41,4 @@ Please follow along as the instructor adds authentication to the API.
 ## Additional Notes
 - Hash passwords before saving them to the database
 - Verify passwords using bcrypt
-
+- NEVER, EVER, under no circumstances, store user passwords in plain text.
