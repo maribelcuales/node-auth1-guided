@@ -45,3 +45,7 @@ Please follow along as the instructor adds authentication to the API.
 - use in-memory sessions to persist authentication information across requests
 - implement logout using a sessions based API
 - restrict access to resources, allowing access only for authenticated users
+- Things to take into account when implementing authentication are:
+  - Password storage.
+  - Password strength.
+  - Brute-force safeguards.
