@@ -42,6 +42,7 @@ Please follow along as the instructor adds authentication to the API.
 - Hash passwords before saving them to the database
 - Verify passwords using bcrypt
 - NEVER, EVER, under no circumstances, store user passwords in plain text.
+  - Two options:  Encryption and Hashing 
 - use in-memory sessions to persist authentication information across requests
 - implement logout using a sessions based API
 - restrict access to resources, allowing access only for authenticated users
@@ -49,3 +50,4 @@ Please follow along as the instructor adds authentication to the API.
   - Password storage.
   - Password strength.
   - Brute-force safeguards.
+
