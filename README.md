@@ -50,4 +50,5 @@ Please follow along as the instructor adds authentication to the API.
   - Password storage.
   - Password strength.
   - Brute-force safeguards.
+- If using env variables, NPM install pg-connection=string => to be able to parse the urls for connection strings. 
 
