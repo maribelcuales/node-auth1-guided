@@ -10,7 +10,15 @@ router.post("/register", (req, res) => {
     const rounds = process.env.BCRYPT_ROUNDS || 8;  
     // hash the password 
     const hash = bcryptjs.hashSync(credentials.password, rounds); 
-    credentials.password = hash;   
+    credentials.password = hash;
+    // save the user to the database 
+    Users.add(credentials)
+      .then(user => {
+        res.status(201).json({ data: user });
+      })
+      .catch(error => {
+        res.status(500).jsonO({ message: error.message });
+      });
   } else {
     res
       .status(400)
