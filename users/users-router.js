@@ -10,6 +10,8 @@ function restricted(req, res, next) {
   }
 }
 
+router.use(restricted);
+
 router.get("/", (req, res) => {
   Users.find()
     .then(users => {
