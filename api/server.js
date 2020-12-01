@@ -20,6 +20,9 @@ const sessionConfig = {
   secret: process.env.COOKIE_SECRET || "keepitsecret, keepitsafe!",
 }; 
 
+// create a session and send a cookie back (the cookie will store the session id)
+server.use(session(sessionConfig)); // turn on sessions for the API
+
 server.use(helmet());
 server.use(express.json());
 server.use(cors());
