@@ -17,7 +17,7 @@ Please follow along as the instructor adds authentication to the API.
 
 ## Auth Workflow
 - register. 
-  - hash the password --> `bcryptjs`.  Go from 'pass' to '2##@SDDRTLKDLFJSLFNDS SLNLSDFLSDFKLSFLS#'.
+  - hash the password --> `bcryptjs`.  Go from 'pass' to '2##@SDDRTE$TESFGRGE%TEFTGE%TEGERERTERGDFDRR$#'.
 - login.
 - logout.
 - restrict access to endpoints. 
