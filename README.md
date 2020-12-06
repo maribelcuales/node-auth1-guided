@@ -41,6 +41,7 @@ Please follow along as the instructor adds authentication to the API.
 ## Additional Notes
 - Hash passwords before saving them to the database
 - Verify passwords using bcrypt
+- bcrypt is a library to help you hash passwords.
 - NEVER, EVER, under no circumstances, store user passwords in plain text.
   - Two options:  Encryption and Hashing 
 - use in-memory sessions to persist authentication information across requests
