@@ -52,4 +52,4 @@ Please follow along as the instructor adds authentication to the API.
   - Password strength.
   - Brute-force safeguards.
 - If using env variables, NPM install pg-connection=string => to be able to parse the urls for connection strings. 
-
+- a recent version of SQLite3 broke knex-cleaner's functionality when foreign keys are enabled, so we're temporarily disabling foreign keys when running the seeds against SQLite3.
